@@ -19,6 +19,7 @@ mongoose
   .catch(() => {
     console.log("Connection failed!");
   });
+  //mongoose.set('useCreateIndex', true); for DeprecationWarning: collection.ensureIndex
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
