@@ -6,11 +6,10 @@ import { AboutUsComponent } from './aboutus/aboutus.component';
 import { Menu1AboutUsComponent } from './aboutus/components/menu1/menu1.aboutus.component';
 import { Menu2AboutUsComponent } from './aboutus/components/menu2/menu2.aboutus.component';
 
-import { PostsComponent } from './posts/posts.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { AuthGuard } from './auth/auth.guard';
-
+import { PostsComponent } from './posts/posts.component';
 
 const routes: Routes = [
  { path: '', component: HomeComponent },

@@ -86,9 +86,9 @@ export class PostsService {
       postData.append('image', image, title);
     } else {
       postData = {
-        id: id,
-        title: title,
-        content: content,
+        id,
+        title,
+        content,
         imagePath: image,
         creator: null
       };
@@ -101,6 +101,6 @@ export class PostsService {
   }
 
   deletePost(postId: string) {
-    return this.http.delete(BACKEND_URL + postId);
+    return this.http.delete('http://localhost:3000/api/posts/' + postId);
   }
 }

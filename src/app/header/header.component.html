@@ -1,23 +1,20 @@
 <mat-toolbar color="primary">
-<span>
-  <a routerLink="/">Chat Room</a>
- </span>
- <span class="spacer"></span>
- <ul>
-<li *ngIf="userIsAuthenticated">
- <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a>
-</li>
-<li *ngIf="!userIsAuthenticated">
- <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
-</li>
-<li *ngIf="!userIsAuthenticated">
-  <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Signup</a>
- </li>
- <li *ngIf="userIsAuthenticated">
-  <button mat-button (click)="onLogout()">Logout</button>
- </li>
- <!--<li><a (click)="googleConnector()" id="google-button" class="btn btn-block btn-social btn-linkedin">
-   <i class="fa fa-google"></i> Sign in with Google 
-  </li>-->
- </ul>
+  <span>
+    <a routerLink="/">Home</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
 </mat-toolbar>
