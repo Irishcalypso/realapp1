@@ -29,7 +29,7 @@ import { PostsComponent } from './posts/posts.component';
     AboutUsComponent,
     PostsComponent,
     Menu1AboutUsComponent,
-    Menu2AboutUsComponent,
+    Menu2AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +39,7 @@ import { PostsComponent } from './posts/posts.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AngularMaterialModule,
-    PostsModule,
+    PostsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
