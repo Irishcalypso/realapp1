@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 import { Post } from './post.model';
 
 const BACKEND_URL = environment.apiUrl + '/posts/';
-// http://localhost:3000/api
+
 @Injectable({ providedIn: 'root' })
 export class PostsService {
   private posts: Post[] = [];
@@ -86,9 +86,9 @@ export class PostsService {
       postData.append('image', image, title);
     } else {
       postData = {
-        id,
-        title,
-        content,
+        id: id,
+        title: title,
+        content: content,
         imagePath: image,
         creator: null
       };
@@ -101,6 +101,6 @@ export class PostsService {
   }
 
   deletePost(postId: string) {
-    return this.http.delete('http://localhost:3000/api/posts/' + postId);
+    return this.http.delete(BACKEND_URL + postId);
   }
 }

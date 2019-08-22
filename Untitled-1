@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+import 'oauthio-web';
+
+
+declare var OAuth: any;
+@Component({
+  selector: 'app-google-connector',
+  templateUrl: './google-connector.component.html',
+  styleUrls: ['./google-connector.component.css']
+})
+
+export class GoogleConnectorComponent implements OnInit {
+
+  constructor(private api: ApiService) { }
+
+  ngOnInit() {}
+
+
+  public googleConnector() {
+    OAuth.initialize('OAUTH-IO PUBLIC KEY');
+
+    // Use popup for oauth
+    OAuth.popup('google').then(google => {
+      console.log('google:', linkedin.access_token);
+
+      google.get('/v1/companies/[company-ID]/updates?format=json').then(data => {
+       //do with the data what you want
+      });
+    });
+  }
+
+}
