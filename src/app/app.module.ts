@@ -19,6 +19,7 @@ import { AboutUsComponent } from './aboutus/aboutus.component';
 import { Menu1AboutUsComponent } from './aboutus/components/menu1/menu1.aboutus.component';
 import { Menu2AboutUsComponent } from './aboutus/components/menu2/menu2.aboutus.component';
 import { PostsComponent } from './posts/posts.component';
+//import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PostsComponent } from './posts/posts.component';
     AboutUsComponent,
     PostsComponent,
     Menu1AboutUsComponent,
-    Menu2AboutUsComponent
+    Menu2AboutUsComponent,
+    //GamesComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './aboutus/aboutus.component';
 import { Menu1AboutUsComponent } from './aboutus/components/menu1/menu1.aboutus.component';
 import { Menu2AboutUsComponent } from './aboutus/components/menu2/menu2.aboutus.component';
+//import { GamesComponent } from './games/games.component';
 
 import { PostsComponent } from './posts/posts.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
  },
  { path: 'posts', component: PostsComponent },
  { path: 'post-list', component: PostListComponent },
+ //{ path: 'games', component: GamesComponent},
  { path: 'create', component: PostCreateComponent, canActivate: [AuthGuard] },
  { path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard] },
  { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},

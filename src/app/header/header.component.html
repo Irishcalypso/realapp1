@@ -1,10 +1,23 @@
 <mat-toolbar color="primary">
 <span>
-  <a routerLink="/">Chat Room</a>
+  <a routerLink="/">HOME</a>
  </span>
  <span class="spacer"></span>
  <ul>
-<li *ngIf="userIsAuthenticated">
+
+<!----<div style="text-align:center">
+ <li><a [routerLink]="['/home']">Home</a> </li>
+
+ <li><a mat-button routerLink="/home" routerLinkActive="mat-accent">Home</a></li>
+ <li><a mat-button routerLink="/aboutus" routerLinkActive="mat-accent">About Us</a></li>
+ <li><a mat-button routerLink="/posts" routerLinkActive="mat-accent">Chat Room</a></li>
+</br>  -->
+
+<!-- <li><a mat-button routerLink="/" routerLinkActive="mat-accent">Home</a></li> -->
+<li><a mat-button routerLink="/games" routerLinkActive="mat-accent">Games</a></li>
+<li><a mat-button routerLink="/aboutus" routerLinkActive="mat-accent">About Us</a></li>
+<li><a mat-button routerLink="/posts" routerLinkActive="mat-accent">Chat Room</a></li>
+ <!--<li *ngIf="userIsAuthenticated">
  <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a>
 </li>
 <li *ngIf="!userIsAuthenticated">
@@ -15,7 +28,8 @@
  </li>
  <li *ngIf="userIsAuthenticated">
   <button mat-button (click)="onLogout()">Logout</button>
- </li>
+ </li> -->
+
  <!--<li><a (click)="googleConnector()" id="google-button" class="btn btn-block btn-social btn-linkedin">
    <i class="fa fa-google"></i> Sign in with Google 
   </li>-->
